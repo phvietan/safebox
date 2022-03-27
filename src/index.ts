@@ -13,8 +13,8 @@ function printHelp() {
     `Usage: ${bin} <command> <filename>
 
 Commands:
-    ${bin} enc/encrypt <filename>      Encrypt with drsafe
-    ${bin} dec/decrypt <filename>      Decrypt with drsafe
+    ${bin} enc/encrypt <filename>      Encrypt with safebox
+    ${bin} dec/decrypt <filename>      Decrypt with safebox
 
 You need one command with filename before moving on
 `;

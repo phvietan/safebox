@@ -1,17 +1,16 @@
 {
-  "name": "@drstrain/safebox",
+  "name": "safebox",
   "version": "1.0.0",
   "description": "A CLI tool for password-based file encryption",
   "main": "out/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf out && tsc && rm -rf node_modules",
+    "build:prod": "npm i && rm -rf out && tsc && rm -rf node_modules && npm i --production",
     "autobuild": "tsc --watch"
   },
   "keywords": [
     "encryption",
     "aes",
-    "safe",
     "cli"
   ],
   "bin": {
@@ -25,7 +24,7 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
-    "@drstrain/drutil": "^1.1.9"
+    "@drstrain/drutil": "^1.1.18"
   },
   "repository": {
     "type": "git",

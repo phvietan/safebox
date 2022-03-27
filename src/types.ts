@@ -3,4 +3,4 @@ export enum METHOD {
   DECRYPT = 'decrypt',
 }
 
-export const SIGNATURE = '@drstrnegth_safe';
+export const SIGNATURE = '........PK...@drstrain_safebox.|';
