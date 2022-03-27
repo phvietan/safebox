@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "baseUrl": "./src/",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "out"
+  },
+  "exclude": [
+    "test",
+    "legacy",
+    "node_modules"
+  ]
+}
