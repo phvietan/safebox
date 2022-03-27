@@ -1,5 +1,5 @@
 {
-  "name": "safebox",
+  "name": "@drstrain/safebox",
   "version": "1.0.0",
   "description": "A CLI tool for password-based file encryption",
   "main": "out/index.js",
@@ -14,7 +14,7 @@
     "cli"
   ],
   "bin": {
-    "drsafe": "out/index.js"
+    "safebox": "out/index.js"
   },
   "private": false,
   "author": "drstrnegth",
@@ -28,10 +28,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phvietan/drsafe.git"
+    "url": "git+https://github.com/phvietan/safebox.git"
   },
   "bugs": {
-    "url": "https://github.com/phvietan/drsafe/issues"
+    "url": "https://github.com/phvietan/safebox/issues"
   },
-  "homepage": "https://github.com/phvietan/drsafe#readme"
+  "homepage": "https://github.com/phvietan/safebox#readme"
 }

@@ -3,8 +3,12 @@ import crypto from 'crypto';
 import { hash } from '@drstrain/drutil';
 import { promtPassword } from '../libs/promtPassword';
 import { SIGNATURE } from '../types';
+import { exit } from 'process';
+import { isFile } from '../libs/checkFile';
 
 export async function encrypt(fileLoc: string): Promise<void> {
+  if (!isFile(fileLoc)) { exit(1); }
+
   const password = await promtPassword('Enter password for encrypt');
   const key = Buffer.from(hash(password), 'hex');
   const iv = crypto.randomBytes(16);
@@ -20,5 +24,6 @@ export async function encrypt(fileLoc: string): Promise<void> {
   ]);
 
   fs.writeFileSync(`${fileLoc}.enc`, encrypted);
+  fs.unlinkSync(fileLoc);
   console.log('Successfully encrypt file');
 }
