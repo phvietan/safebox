@@ -4,7 +4,8 @@ import { hash } from '@drstrain/drutil';
 import { promtPassword } from '../libs/promtPassword';
 import { SIGNATURE } from '../types';
 import { exit } from 'process';
-import { isFile } from '../libs/checkFile';
+import { isFile } from '../libs/isFile';
+import { getNewFileName } from '../libs/newFileName';
 
 export async function encrypt(fileLoc: string): Promise<void> {
   if (!isFile(fileLoc)) { exit(1); }
@@ -23,7 +24,8 @@ export async function encrypt(fileLoc: string): Promise<void> {
     cipher.final()
   ]);
 
-  fs.writeFileSync(`${fileLoc}.enc`, encrypted);
+  const encFileName = getNewFileName(`${fileLoc}.enc`);
+  fs.writeFileSync(encFileName, encrypted);
   fs.unlinkSync(fileLoc);
-  console.log('Successfully encrypt file');
+  console.log(`Successfully encrypt file into: ${encFileName}`);
 }
